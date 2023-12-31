@@ -1,0 +1,17 @@
+<div class="blog-container">
+  <app-header></app-header>
+  <main class="main-content">
+    <section class="featured-articles">
+      <article *ngFor="let article of articles" class="article-card">
+        <div class="article-image-container">
+          <img [src]="article.image" [alt]="article.title" class="article-image">
+        </div>
+        <div class="article-details">
+          <h2 class="article-title">{{ article.title }}</h2>
+          <p class="article-summary">{{ article.summary }}</p>
+        </div>
+      </article>
+    </section>
+  </main>
+  <app-footer></app-footer>
+</div>

@@ -1,0 +1,107 @@
+
+.blog-container {
+  font-family: 'Arial', sans-serif;
+}
+
+.main-content {
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.featured-articles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.article-card {
+  background-color: white;
+  border: none;
+  overflow: hidden;
+  /* Ajuste o padding para criar espaço para o conteúdo */
+  padding: 15px;
+}
+
+/* Contêiner da imagem com uma altura fixa e mantendo a proporção */
+.article-image-container {
+  min-width: 300px;
+  max-height: 200px; /* Altura fixa para todas as imagens */
+  overflow: hidden; /* Esconde qualquer parte da imagem que exceda o contêiner */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0; /* Ou qualquer outra cor de fundo desejada */
+  object-fit: contain; /* Garante que toda a imagem seja visível dentro do contêiner */
+}
+
+.article-image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+@media (max-width: 768px) {
+  .article-image-container {
+    height: auto; /* A altura se ajusta para manter a proporção da imagem em dispositivos móveis */
+  }
+}
+
+
+.article-image:hover {
+  transform: scale(1.05);
+}
+
+.article-details {
+  padding: 15px;
+}
+
+.article-title {
+  margin-top: 0;
+  color: #333333;
+}
+
+.article-summary {
+  color: #666666;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .featured-articles {
+    grid-template-columns: 1fr;
+  }
+
+  .article-card {
+    margin-bottom: 20px;
+  }
+}
+
+/* styles.css ou app.component.css */
+/* app.component.css */
+.blog-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Garante que o container seja no mínimo do tamanho da altura da viewport */
+  font-family: 'Arial', sans-serif;
+}
+
+/* ... outros estilos ... */
+
+.main-content {
+  flex: 1; /* Faz o conteúdo principal expandir para ocupar o espaço disponível */
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+
+
+@media (max-width: 768px) {
+  .featured-articles {
+    grid-template-columns: 1fr;
+  }
+
+  .article-card {
+    margin-bottom: 20px;
+  }
+  .blog-footer {
+    position: static; /* ou remova qualquer 'position: absolute' ou 'position: fixed' */
+  }
+}
