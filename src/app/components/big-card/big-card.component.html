@@ -1,0 +1,17 @@
+<div class="container-big-card">
+  <div class="big-card-picture">
+    <img src="{{ cardImage }}" alt="" height="200" width="300" />
+  </div>
+
+  <div class="big-card-title">
+    <h1>
+      <a (click)="goToContent(id)">{{ cardTitle }}</a>
+    </h1>
+  </div>
+
+  <div class="big-card-description">
+    <p (click)="goToContent(id)">
+      {{ cardDescription }}
+    </p>
+  </div>
+</div>
